@@ -41,7 +41,7 @@ class JeuMemoire:
             btn = tk.Button(
                 jeu.grille,
                 text="",
-                font=("Helvetica", 22), # Correction de "Helvetice" -> "Helvetica"
+                font=("Helvetica", 22),
                 width=4,
                 height=2,
                 bg=COULEUR_PRINCIPALE,
@@ -57,7 +57,7 @@ class JeuMemoire:
 
         # Score
         jeu.label_score = tk.Label(jeu.racine, text="Paires trouvées : 0/8 | Essais : 0", font=("Helvetica", 11), bg=COULEUR_FOND, fg=COULEUR_TEXTE)
-        jeu.label_score.pack(pady=15) # Correction de pack=15 -> pady=15
+        jeu.label_score.pack(pady=15)
 
         # Bouton Recommencer
         btn_reset = tk.Button(jeu.racine, text="NOUVELLE PARTIE", font=("Helvetica", 11, "bold"), bg=COULEUR_PRINCIPALE, fg="white", activebackground=COULEUR_PRINCIPALE, activeforeground="white", relief="flat", padx=15, pady=8, command=jeu.nouvelle_partie)
@@ -65,7 +65,7 @@ class JeuMemoire:
 
     def nouvelle_partie(jeu):
         random.shuffle(jeu.cartes)
-        jeu.carte1 = None # Correction de cart1 -> carte1
+        jeu.carte1 = None
         jeu.carte2 = None
         jeu.paires = 0
         jeu.essais = 0
